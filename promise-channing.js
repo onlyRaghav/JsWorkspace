@@ -7,19 +7,8 @@ function getTen(num) {
     }, 3000);
   });
 }
-function syncFunction(num){
-  return new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-      resolve(num);
-    },5000)
-  })
-}
-const result=syncFunction(10).then((val)=>{
-  console.log(val);
-  return val * 2;
-});
-console.log(result);
-/*getTen(10)
+
+getTen(10)
   .then((result) => {
     console.log(result);
     return getTen(result * 2);
@@ -59,4 +48,3 @@ promise
   },(err)=>{
     console.log(err);
   });
-*/
